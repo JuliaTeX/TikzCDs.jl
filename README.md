@@ -1,4 +1,4 @@
-# TikzCD.jl
+# TikzCDs.jl
 
 A wrapper around [TikzPictures.jl](https://github.com/JuliaTeX/TikzPictures.jl)
 for easier drawing of commutative diagrams using
