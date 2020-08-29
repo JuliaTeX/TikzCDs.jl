@@ -1,5 +1,7 @@
 # TikzCDs.jl
 
+![Tests](https://github.com/JuliaTeX/TikzCDs.jl/workflows/Tests/badge.svg)
+
 A wrapper around [TikzPictures.jl](https://github.com/JuliaTeX/TikzPictures.jl)
 for easier drawing of commutative diagrams using
 [`tikz-cd`](https://www.ctan.org/pkg/tikz-cd)
