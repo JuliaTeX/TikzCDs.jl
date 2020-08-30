@@ -13,6 +13,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - name: "Set up environment"
+        run: |
+          sudo apt-get -qq update
+          sudo apt install -y pdf2svg texlive-latex-base texlive-binaries texlive-pictures texlive-latex-extra
       - name: "Set up Julia"
         uses: julia-actions/setup-julia@latest
         with:
