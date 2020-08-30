@@ -25,8 +25,8 @@ end
 # Test tikz-cd
 
 data = L"""
-  A \arrow{rd} \arrow{r} & B \\
-                         & C
+A \arrow[rd] \arrow[r, "\phi"] & B \\
+                               & C
 """
 tp = TikzCD(data, options="scale=0.25")
 
