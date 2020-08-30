@@ -8,17 +8,13 @@ for easier drawing of commutative diagrams using
 
 ### Dependencies
 
-*Currently requires `TikzPictures.jl` to be added in development using `]dev
-TikzPictures`*
-
 In order to use this library, `lualatex` must be installed.
-The `texlive` and `miktex` distributions include `lualatex`.
 You must also have `dvisvgm` installed.
 
 On Ubuntu, you can get these, if not already present, by running:
 
 ```
-sudo apt-get install texlive-latex-base and sudo apt-get install texlive-binaries
+$ sudo apt-get install texlive-latex-base texlive-binaries texlive-luatex
 ```
 
 ## Example
