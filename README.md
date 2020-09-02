@@ -1,6 +1,7 @@
 # TikzCDs.jl
 
 ![Tests](https://github.com/JuliaTeX/TikzCDs.jl/workflows/Tests/badge.svg)
+[![codecov](https://codecov.io/gh/JuliaTeX/TikzCDs.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/JuliaTeX/TikzCDs.jl)
 
 A wrapper around [TikzPictures.jl](https://github.com/JuliaTeX/TikzPictures.jl)
 for easier drawing of commutative diagrams using
