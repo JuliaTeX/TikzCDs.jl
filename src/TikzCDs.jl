@@ -18,7 +18,7 @@ function TikzCD(data::AbstractString; preamble="", kw...)
   if typeof(data) == LaTeXString
     data = strip(data[2:end-1])
   end
-  TikzPicture(data, environment="tikzcd", preamble=preamble, kw...)
+  TikzPicture(data; environment="tikzcd", preamble=preamble, kw...)
 end
 
 end
