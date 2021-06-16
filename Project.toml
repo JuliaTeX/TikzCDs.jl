@@ -2,7 +2,7 @@ name = "TikzCDs"
 uuid = "1e332c56-9431-4126-8a34-92cbdf251ae4"
 license = "MIT"
 authors = ["Micah Halter <micah@mehalter.com>"]
-version = "0.1.0"
+version = "0.2.0"
 
 [deps]
 LaTeXStrings = "b964fa9f-0449-5b57-a5c2-d3ea65f4040f"
