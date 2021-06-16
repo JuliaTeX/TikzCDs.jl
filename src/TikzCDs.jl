@@ -9,7 +9,7 @@ export LaTeXString, @L_str, @L_mstr
 
 export TikzCD
 
-function TikzCD(data::AbstractString; options="", preamble="", enableWrite18=true)
+function TikzCD(data::AbstractString; preamble="", kw...)
   # check for tikz-cd package being imported
   if !occursin("\\usepackage{tikz-cd}", preamble)
     preamble = strip(string("\\usepackage{tikz-cd}\n", preamble))
@@ -18,7 +18,7 @@ function TikzCD(data::AbstractString; options="", preamble="", enableWrite18=tru
   if typeof(data) == LaTeXString
     data = strip(data[2:end-1])
   end
-  TikzPicture(data, options=options, preamble=preamble, environment="tikzcd", enableWrite18=enableWrite18)
+  TikzPicture(data; environment="tikzcd", preamble=preamble, kw...)
 end
 
 end
