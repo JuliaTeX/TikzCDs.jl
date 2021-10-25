@@ -1,9 +1,10 @@
 # BASED ON TIKZPICTURES.JL TESTS
 
 using TikzCDs
+using TikzCDs: Styles
 using Test
 
-for file in ["testCD.pdf", "testCDDoc.pdf", "testCD.tex"]
+for file in ["testCD.pdf", "testCDDoc.pdf", "testCD.tex", "triangle.pdf", "triangle.svg"]
   if isfile(file)
     rm(file)
   end
@@ -50,3 +51,25 @@ if success(`lualatex -v`)
 else
     @warn "lualatex is missing; can not test compilation"
 end
+
+# Test q.uiver.app support
+function testrender(diagram, name::String)
+    if success(`lualatex -v`)
+        save(PDF(name), diagram)
+        @test isfile("$name.pdf")
+        save(SVG(name), diagram)
+    else
+        @warn "lualatex is missing; can not test compilation"
+    end
+end
+
+
+triangle = L"""        A &&& Q \\
+               \\
+               &&& P
+               \arrow["h", from=1-4, to=3-4]
+               \arrow["f", from=1-1, to=1-4]
+               \arrow["g"', from=1-1, to=3-4]
+            """
+tridiagram = TikzCD(triangle, preamble=Styles.Quiver)
+testrender(tridiagram, "triangle")

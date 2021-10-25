@@ -29,3 +29,20 @@ A \arrow{rd} \arrow{r} & B \\
 
 For more usage details, check out the
 [TikzPictures.jl repository](https://github.com/JuliaTeX/TikzPictures.jl).
+
+## Quiver Support
+
+You can use [Quiver](q.uiver.app) to draw your diagrams and then render them with TikzCD by taking the body of the tikzcd from the exported tex file.
+The `QuiverCD` function will append the quiver.sty file to your TikzCD diagram.
+
+```julia
+using TikzCDs: Styles
+triangle = L"""        A &&& Q \\
+               \\
+               &&& P
+               \arrow["h", from=1-4, to=3-4]
+               \arrow["f", from=1-1, to=1-4]
+               \arrow["g"', from=1-1, to=3-4]
+            """
+tridiagram = TikzCD(triangle, preamble=Styles.Quiver)
+```

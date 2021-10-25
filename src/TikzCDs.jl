@@ -21,4 +21,6 @@ function TikzCD(data::AbstractString; preamble="", kw...)
   TikzPicture(data; environment="tikzcd", preamble=preamble, kw...)
 end
 
+include("Styles.jl")
+
 end
