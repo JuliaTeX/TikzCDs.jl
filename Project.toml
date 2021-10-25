@@ -2,15 +2,15 @@ name = "TikzCDs"
 uuid = "1e332c56-9431-4126-8a34-92cbdf251ae4"
 license = "MIT"
 authors = ["Micah Halter <micah@mehalter.com>"]
-version = "0.2.0"
+version = "0.2.1"
 
 [deps]
 LaTeXStrings = "b964fa9f-0449-5b57-a5c2-d3ea65f4040f"
 TikzPictures = "37f6aa50-8035-52d0-81c2-5a1d08754b2d"
 
 [compat]
-LaTeXStrings = "^1.1"
-TikzPictures = "^3.3"
+LaTeXStrings = "^1"
+TikzPictures = "^3"
 julia = "1"
 
 [extras]
