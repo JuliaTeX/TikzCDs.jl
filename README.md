@@ -36,6 +36,7 @@ You can use [Quiver](q.uiver.app) to draw your diagrams and then render them wit
 The `QuiverCD` function will append the quiver.sty file to your TikzCD diagram.
 
 ```julia
+using TikzCDs: Styles
 triangle = L"""        A &&& Q \\
                \\
                &&& P
@@ -43,5 +44,5 @@ triangle = L"""        A &&& Q \\
                \arrow["f", from=1-1, to=1-4]
                \arrow["g"', from=1-1, to=3-4]
             """
-tridiagram = QuiverCD(triangle)
+tridiagram = TikzCD(triangle, preamble=Styles.Quiver)
 ```

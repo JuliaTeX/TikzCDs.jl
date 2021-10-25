@@ -1,6 +1,7 @@
 # BASED ON TIKZPICTURES.JL TESTS
 
 using TikzCDs
+using TikzCDs: Styles
 using Test
 
 for file in ["testCD.pdf", "testCDDoc.pdf", "testCD.tex", "triangle.pdf", "triangle.svg"]
@@ -70,5 +71,5 @@ triangle = L"""        A &&& Q \\
                \arrow["f", from=1-1, to=1-4]
                \arrow["g"', from=1-1, to=3-4]
             """
-tridiagram = QuiverCD(triangle)
+tridiagram = TikzCD(triangle, preamble=Styles.Quiver)
 testrender(tridiagram, "triangle")
